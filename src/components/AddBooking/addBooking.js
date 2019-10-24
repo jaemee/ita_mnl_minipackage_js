@@ -23,13 +23,13 @@ export default class addBooking extends React.Component{
         );
     }
 
-    generateID = () => {
+    generateID(){
         return parseInt(new Date().getTime() + Math.random);
     }
 
     renderData = () => {
         this.props.addBooking({
-            id : parseInt(this.generateID),
+            id : this.generateID(),
             packageNo: this.refs.pkgNum.value,
             receiver: this.refs.receiver.value,
             phoneNumber: this.refs.phoneNum.value,
